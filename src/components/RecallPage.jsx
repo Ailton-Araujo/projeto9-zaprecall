@@ -2,6 +2,7 @@ import { RecallPageSC } from "./styled/RecallPage.styled";
 import Card from "./Card";
 
 export default function RecallPage({
+  logo,
   cards,
   Icons,
   contAnswered,
@@ -10,7 +11,11 @@ export default function RecallPage({
   setIconAnswered,
 }) {
   return (
-    <RecallPageSC>
+    <RecallPageSC contanswered={contAnswered} ncards={cards.length}>
+      <span>
+        <img src={logo} alt="Logo" />
+        <p>ZapRecall</p>
+      </span>
       <section>
         {cards.map((card, index) => {
           return (

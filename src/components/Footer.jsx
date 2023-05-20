@@ -1,20 +1,46 @@
+import iconRight from "../assets/party.png";
+import iconWrong from "../assets/sad.png";
+
 import { FooterSC } from "./styled/Footer.styled";
 
 export default function Footer({ contAnswered, ncards, Icons, iconAnswered }) {
   return (
     <FooterSC>
+      {contAnswered === ncards && !iconAnswered.includes(2) && (
+        <section data-test="finish-text">
+          <div>
+            <img src={iconRight} alt="iconRight" />
+            <p>Parabéns!</p>
+          </div>
+          <p>Você não esqueceu de nenhum flashcard!</p>
+        </section>
+      )}
+
+      {contAnswered === ncards && iconAnswered.includes(2) && (
+        <section data-test="finish-text">
+          <div>
+            <img src={iconWrong} alt="iconWrong" />
+            <p>Putz...</p>
+          </div>
+          <p>Ainda faltam alguns... Mas não desanime!</p>
+        </section>
+      )}
+
       <p data-test="footer">
         {contAnswered}/{ncards} CONCLUÍDOS
       </p>
-      {iconAnswered.map((item) => {
-        return (
-          <img
-            data-test={Icons[item].datatest}
-            src={Icons[item].icon}
-            alt={Icons[item].datatest}
-          />
-        );
-      })}
+      <div>
+        {iconAnswered.map((item, index) => {
+          return (
+            <img
+              key={index}
+              data-test={Icons[item].datatest}
+              src={Icons[item].icon}
+              alt={Icons[item].datatest}
+            />
+          );
+        })}
+      </div>
     </FooterSC>
   );
 }
