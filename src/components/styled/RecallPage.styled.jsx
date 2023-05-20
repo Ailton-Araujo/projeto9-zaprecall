@@ -31,7 +31,7 @@ export const RecallPageSC = styled.main`
 
   section {
     padding: 0 40px;
-    padding-bottom: ${({ contanswered, ncards }) => contanswered === ncards ? "175px" : "70px"};
+    padding-bottom: ${({ contanswered, ncards }) => contanswered === ncards ? "175px" : "85px"};
     display: flex;
     flex-direction: column;
     justify-content: center;
