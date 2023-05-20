@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterSC = styled.footer`
   width: 100%;
   min-height: 70px;
-  padding: 14px 40px;
+  padding: 18px 0px;
   background: #ffffff;
   box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
   position: fixed;
@@ -38,7 +38,6 @@ export const FooterSC = styled.footer`
     }
 
     div {
-      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const RecallPageSC = styled.main`
-  width: 100vw;
+  width: 100dvw;
   background-color: #fb6b6b;
   border: 1px solid #dbdbdb;
 
@@ -24,9 +24,7 @@ export const RecallPageSC = styled.main`
       align-items: center;
       text-align: center;
       letter-spacing: -0.012em;
-
       color: #ffffff;
-
       transform: rotate(0.58deg);
     }
   }
@@ -34,7 +32,10 @@ export const RecallPageSC = styled.main`
   section {
     padding: 0 40px;
     padding-bottom: ${({ contanswered, ncards }) => contanswered === ncards ? "175px" : "70px"};
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   div {
