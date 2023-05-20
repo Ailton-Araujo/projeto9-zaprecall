@@ -5,7 +5,7 @@ import { FooterSC } from "./styled/Footer.styled";
 
 export default function Footer({ contAnswered, ncards, Icons, iconAnswered }) {
   return (
-    <FooterSC>
+    <FooterSC data-test="footer">
       {contAnswered === ncards && !iconAnswered.includes(2) && (
         <section data-test="finish-text">
           <p><span><img src={iconRight} alt="iconRight" /></span><strong>     Parabéns!</strong></p>
@@ -23,7 +23,7 @@ export default function Footer({ contAnswered, ncards, Icons, iconAnswered }) {
         </section>
       )}
 
-      <p data-test="footer">
+      <p>
         {contAnswered}/{ncards} CONCLUÍDOS
       </p>
       <div>
