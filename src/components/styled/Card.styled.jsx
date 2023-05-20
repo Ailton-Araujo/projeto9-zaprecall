@@ -24,7 +24,6 @@ export const CardSC = styled.div`
     text-decoration-line: ${({ color }) =>
       color && "line-through"};
     color: ${({ color }) => color || "#333333"};
-    gap: 5px;
   }
 
   div {
