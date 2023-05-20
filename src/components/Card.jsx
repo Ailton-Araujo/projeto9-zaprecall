@@ -60,6 +60,7 @@ export default function Card({
 
       {cardState === "answered" && (
         <>
+        
           <p data-test="flashcard-text">{card.answer}</p>
           <div>
             <AnswerButtonSC
@@ -72,7 +73,8 @@ export default function Card({
                 setCardState("closed");
                 const temp = [...iconAnswered, 2];
                 setIconAnswered(temp);
-                setIconState(2);
+                const postion = 2;
+                setIconState(postion);
               }}
             >
               Não lembrei
@@ -88,13 +90,15 @@ export default function Card({
                 setCardState("closed");
                 const temp = [...iconAnswered, 1];
                 setIconAnswered(temp);
-                setIconState(1);
+                const postion = 1;
+                setIconState(postion);
               }}
             >
               Quase não lembrei
             </AnswerButtonSC>
 
             <AnswerButtonSC
+            const 
               cardstate={cardState}
               bg={Icons[0].color}
               data-test="zap-btn"
@@ -104,7 +108,8 @@ export default function Card({
                 setCardState("closed");
                 const temp = [...iconAnswered, 0];
                 setIconAnswered(temp);
-                setIconState(0);
+                const postion = 0;
+                setIconState(postion);
               }}
             >
               Zap!
