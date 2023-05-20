@@ -25,6 +25,10 @@ export const CardSC = styled.div`
       color !== "#333333" && "line-through"};
     color: ${({ color }) => color};
   }
+img{
+  padding: 0px 6px;
+}
+
 
   div {
     width: 100%;

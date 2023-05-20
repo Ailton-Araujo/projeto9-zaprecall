@@ -17,7 +17,7 @@ export const AnswerButtonSC = styled.button`
   background: none;
   background: ${({ bg }) => bg};
 
-  &:disabled {
-    cursor: not-allowed;
-  };
+  img{
+    padding: 0px;
+  }
 `;

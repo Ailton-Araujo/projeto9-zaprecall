@@ -25,32 +25,34 @@ export default function Card({
     const temp = [...iconAnswered, num];
     setIconAnswered(temp);
     setIconState(num);
-    setColor(Icons[num].color)
+    setColor(Icons[num].color);
   }
-
+  
   return (
-    <CardSC
-      cardstate={cardState}
-      color={color}
-      data-test="flashcard"
-    >
+    <CardSC cardstate={cardState} color={color} data-test="flashcard">
       {cardState === "closed" && (
         <>
           <p data-test="flashcard-text">Pergunta {index + 1}</p>
-          <AnswerButtonSC
-            cardstate={cardState}
-            disabled={iconState !== -1 && true}
-            data-test="play-btn"
-            onClick={() => {
-              setCardState("turned");
-            }}
-          >
+
+          {iconState === -1 && (
+            <AnswerButtonSC
+              cardstate={cardState}
+              data-test="play-btn"
+              onClick={() => {
+                setCardState("turned");
+              }}
+            >
+              <img src={arrow} alt="ArrowGame" />
+            </AnswerButtonSC>
+          )}
+
+          {iconState !== -1 && (
             <img
               data-test={iconState !== -1 && Icons[iconState].datatest}
-              src={iconState === -1 ? arrow : Icons[iconState].icon}
-              alt="ArrowGame/Result"
+              src={Icons[iconState !== -1 && iconState].icon}
+              alt="Result"
             />
-          </AnswerButtonSC>
+          )}
         </>
       )}
 
