@@ -15,7 +15,7 @@ export const AnswerButtonSC = styled.button`
 
   border: none;
   background: none;
-  background: ${({ color }) => color};
+  background: ${({ bg }) => bg};
 
   &:disabled {
     cursor: not-allowed;

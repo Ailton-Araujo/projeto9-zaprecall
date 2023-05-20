@@ -64,7 +64,7 @@ export default function Card({
           <div>
             <AnswerButtonSC
               cardstate={cardState}
-              color={Icons[2].color}
+              bg={Icons[2].color}
               data-test="no-btn"
               onClick={() => {
                 contAnswered++;
@@ -80,7 +80,7 @@ export default function Card({
 
             <AnswerButtonSC
               cardstate={cardState}
-              color={Icons[1].color}
+              bg={Icons[1].color}
               data-test="partial-btn"
               onClick={() => {
                 contAnswered++;
@@ -96,7 +96,7 @@ export default function Card({
 
             <AnswerButtonSC
               cardstate={cardState}
-              color={Icons[0].color}
+              bg={Icons[0].color}
               data-test="zap-btn"
               onClick={() => {
                 contAnswered++;

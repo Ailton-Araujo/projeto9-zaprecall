@@ -14,4 +14,4 @@ export default function WelcomePage({ logo, setBegin }) {
       </button>
     </WelcomePageSC>
   );
-};
+}
