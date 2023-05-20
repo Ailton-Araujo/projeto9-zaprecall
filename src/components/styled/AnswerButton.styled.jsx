@@ -11,13 +11,13 @@ export const AnswerButtonSC = styled.button`
   font-size: 12px;
   line-height: 14px;
   color: #ffffff;
-
   cursor: pointer;
+
   border: none;
   background: none;
   background: ${({ color }) => color};
 
-  &disabled {
+  &:disabled {
     cursor: not-allowed;
-  }
+  };
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const RecallPageSC = styled.main`
-  width: 100dvw;
+  width: 100%;
   background-color: #fb6b6b;
   border: 1px solid #dbdbdb;
 

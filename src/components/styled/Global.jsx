@@ -54,6 +54,4 @@ table {
 box-sizing: border-box;
 font-family: 'Recursive', sans-serif;
 }
-
-
 `;

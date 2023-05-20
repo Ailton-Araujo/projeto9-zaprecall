@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WelcomePageSC = styled.div`
-  width: 100dvw;
+  width: 100%;
   height: 100dvh;
   display: flex;
   flex-direction: column;
