@@ -71,7 +71,7 @@ export default function Card({
                 contAnswered++;
                 setAnswered(contAnswered);
                 setCardState("closed");
-                let temp = [...iconAnswered, 2];
+                const temp = [...iconAnswered, 2];
                 setIconAnswered(temp);
                 setIconState(2);
               }}
@@ -87,7 +87,7 @@ export default function Card({
                 contAnswered++;
                 setAnswered(contAnswered);
                 setCardState("closed");
-                let temp = [...iconAnswered, 1];
+                const temp = [...iconAnswered, 1];
                 setIconAnswered(temp);
                 setIconState(1);
               }}
@@ -103,7 +103,7 @@ export default function Card({
                 contAnswered++;
                 setAnswered(contAnswered);
                 setCardState("closed");
-                let temp = [...iconAnswered, 0];
+                const temp = [...iconAnswered, 0];
                 setIconAnswered(temp);
                 setIconState(0);
               }}

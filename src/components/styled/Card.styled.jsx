@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const CardSC = styled.div`
   width: clamp(300px, 60%, 80%);
   height: ${({ cardstate }) => (cardstate === "closed" ? "65px" : "150px")};
-
   background: ${({ cardstate }) =>
     cardstate === "closed" ? "#ffffff" : "#FFFFD4"};
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
@@ -11,8 +10,7 @@ export const CardSC = styled.div`
   display: flex;
   flex-direction: ${({ cardstate }) =>
     cardstate === "closed" ? "row" : "column"};
-  justify-content: ${({ cardstate }) =>
-    cardstate === "closed" ? "space-between" : "space-between"};
+  justify-content: space-between;
   align-items: ${({ cardstate }) =>
     cardstate === "closed" ? "center" : "start"};
   position: relative;
