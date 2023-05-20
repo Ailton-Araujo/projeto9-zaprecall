@@ -22,8 +22,8 @@ export const CardSC = styled.div`
     line-height: ${({ cardstate }) =>
       cardstate === "closed" ? "19px" : "22px"};
     text-decoration-line: ${({ color }) =>
-      color && "line-through"};
-    color: ${({ color }) => color || "#333333"};
+      color !== "#333333" && "line-through"};
+    color: ${({ color }) => color};
   }
 
   div {

@@ -16,11 +16,22 @@ export default function Card({
 }) {
   const [cardState, setCardState] = useState("closed");
   const [iconState, setIconState] = useState(-1);
+  const [color, setColor] = useState("#333333");
+
+  function cardAnswerd(num) {
+    contAnswered++;
+    setAnswered(contAnswered);
+    setCardState("closed");
+    const temp = [...iconAnswered, num];
+    setIconAnswered(temp);
+    setIconState(num);
+    setColor(Icons[num].color)
+  }
 
   return (
     <CardSC
       cardstate={cardState}
-      color={Icons[iconState]}
+      color={color}
       data-test="flashcard"
     >
       {cardState === "closed" && (
@@ -60,7 +71,6 @@ export default function Card({
 
       {cardState === "answered" && (
         <>
-        
           <p data-test="flashcard-text">{card.answer}</p>
           <div>
             <AnswerButtonSC
@@ -68,13 +78,7 @@ export default function Card({
               bg={Icons[2].color}
               data-test="no-btn"
               onClick={() => {
-                contAnswered++;
-                setAnswered(contAnswered);
-                setCardState("closed");
-                const temp = [...iconAnswered, 2];
-                setIconAnswered(temp);
-                const postion = 2;
-                setIconState(postion);
+                cardAnswerd(2);
               }}
             >
               Não lembrei
@@ -85,31 +89,19 @@ export default function Card({
               bg={Icons[1].color}
               data-test="partial-btn"
               onClick={() => {
-                contAnswered++;
-                setAnswered(contAnswered);
-                setCardState("closed");
-                const temp = [...iconAnswered, 1];
-                setIconAnswered(temp);
-                const postion = 1;
-                setIconState(postion);
+                cardAnswerd(1);
               }}
             >
               Quase não lembrei
             </AnswerButtonSC>
 
             <AnswerButtonSC
-            const 
+              const
               cardstate={cardState}
               bg={Icons[0].color}
               data-test="zap-btn"
               onClick={() => {
-                contAnswered++;
-                setAnswered(contAnswered);
-                setCardState("closed");
-                const temp = [...iconAnswered, 0];
-                setIconAnswered(temp);
-                const postion = 0;
-                setIconState(postion);
+                cardAnswerd(0);
               }}
             >
               Zap!
