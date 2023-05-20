@@ -8,7 +8,10 @@ export default function Footer({ contAnswered, ncards, Icons, iconAnswered }) {
     <FooterSC data-test="footer">
       {contAnswered === ncards && !iconAnswered.includes(2) && (
         <section data-test="finish-text">
-          <p><span><img src={iconRight} alt="iconRight" /></span><strong>     Parabéns!</strong></p>
+          <div>
+            <img src={iconRight} alt="iconRight" />
+            <p>Parabéns!</p>
+          </div>
           <p>Você não esqueceu de nenhum flashcard!</p>
         </section>
       )}
