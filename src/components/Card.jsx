@@ -20,8 +20,7 @@ export default function Card({
   return (
     <CardSC
       cardstate={cardState}
-      icons={Icons}
-      iconstate={iconState}
+      color={Icons[iconState]}
       data-test="flashcard"
     >
       {cardState === "closed" && (

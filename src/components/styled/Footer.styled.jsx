@@ -36,15 +36,9 @@ export const FooterSC = styled.footer`
       line-height: 22px;
       color: #333333;
     }
-
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      p {
-        font-weight: 700;
-      }
+    
+    strong {
+      font-weight: 700;
     }
   }
 `;
