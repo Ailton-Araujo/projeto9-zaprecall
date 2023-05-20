@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GlobalStyle } from "./components/styled/Global";
 import logo from "./assets/logo.png";
 import cards from "./Cards";
-import Icons from "./Data";
+import Icons from "./components/Data";
 import WelcomePage from "./components/WelcomePage";
 import RecallPage from "./components/RecallPage";
 import Footer from "./components/Footer";
