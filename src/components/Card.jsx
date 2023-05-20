@@ -38,7 +38,7 @@ export default function Card({
             <img
               data-test={iconState !== -1 && Icons[iconState].datatest}
               src={iconState === -1 ? arrow : Icons[iconState].icon}
-              alt="ArrowGame"
+              alt="ArrowGame/Result"
             />
           </AnswerButtonSC>
         </>
@@ -66,7 +66,7 @@ export default function Card({
             <AnswerButtonSC
               cardstate={cardState}
               color={Icons[2].color}
-              data-test="play-btn"
+              data-test="no-btn"
               onClick={() => {
                 contAnswered++;
                 setAnswered(contAnswered);
@@ -82,7 +82,7 @@ export default function Card({
             <AnswerButtonSC
               cardstate={cardState}
               color={Icons[1].color}
-              data-test="play-btn"
+              data-test="partial-btn"
               onClick={() => {
                 contAnswered++;
                 setAnswered(contAnswered);
@@ -98,7 +98,7 @@ export default function Card({
             <AnswerButtonSC
               cardstate={cardState}
               color={Icons[0].color}
-              data-test="play-btn"
+              data-test="zap-btn"
               onClick={() => {
                 contAnswered++;
                 setAnswered(contAnswered);
