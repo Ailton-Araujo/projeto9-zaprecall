@@ -29,10 +29,11 @@ export default function Card({
   }
   
   return (
-    <CardSC cardstate={cardState} color={color} data-test="flashcard">
+    <CardSC data-test="flashcard" cardstate={cardState} color={color}>
       {cardState === "closed" && (
         <>
-          <p>Pergunta {index + 1}</p>
+          <p data-test="flashcard-text">Pergunta {index + 1}</p>
+
           {iconState === -1 && (
             <AnswerButtonSC
               cardstate={cardState}
@@ -44,6 +45,7 @@ export default function Card({
               <img src={arrow} alt="ArrowGame" />
             </AnswerButtonSC>
           )}
+
           {iconState !== -1 && (
             <img
               data-test={iconState !== -1 && Icons[iconState].datatest}
@@ -56,7 +58,7 @@ export default function Card({
 
       {cardState === "turned" && (
         <>
-          <p>{card.question}</p>
+          <p data-test="flashcard-text">{card.question}</p>
           <AnswerButtonSC
             cardstate={cardState}
             data-test="turn-btn"
@@ -71,7 +73,7 @@ export default function Card({
 
       {cardState === "answered" && (
         <>
-          <p>{card.answer}</p>
+          <p data-test="flashcard-text">{card.answer}</p>
           <div>
             <AnswerButtonSC
               cardstate={cardState}
